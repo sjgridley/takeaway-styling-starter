@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!-- TODO: Add required meta tags -->
+        <title>{{ title }} - The Takeaway Shop</title>
+        <!-- TODO: Add stylesheet for bootstrap css -->
+    </head>
+    <body>
+        <!-- TODO: Replace this section of the page with a navigation bar -->
+        <p>The Takeaway Shop</p>
+        <!-- 
+            The active page is set in each template, and indicated 
+            with red font in the base template using inline styling. 
+            This should be done with active class once Bootstrap has been added.
+         -->
+        <a href="{{ url_for('index') }}"
+            {% if active_menu_item == 'Home' %} style='color: red' {% endif %}>
+            Home
+        </a>
+        <a href="{{ url_for('menu') }}"
+            {% if active_menu_item == 'Menu' %} style='color: red' {% endif %}>
+            Menu
+        </a>
+        <a href="{{ url_for('orders') }}"
+            {% if active_menu_item == 'Orders' %} style='color: red' {% endif %}>
+            Orders</a>
+        <div class="container">
+        {% block content %}
+        {% endblock %}
+        </div>
+        <!-- TODO: Add bootstrap js file here. -->
+    </body>
+</html>
