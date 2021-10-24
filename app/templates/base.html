@@ -17,8 +17,12 @@
                 <li class="nav-item">
                     <a class="nav-link {% if active_menu_item == 'Home' %} active {% endif %}" 
                         href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {% if active_menu_item == 'Menu' %} active {% endif %}" 
                         href="{{ url_for('menu') }}">Menu</a>
+                </li>
+                <li class="nav-item"></li>
                     <a class="nav-link {% if active_menu_item == 'Orders' %} active {% endif %}" 
                         href="{{ url_for('orders') }}">Orders</a>
                 </li>
